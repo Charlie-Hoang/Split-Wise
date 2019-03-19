@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewPartyVC" customModule="SplitwiseApp" customModuleProvider="target">
+            <connections>
+                <outlet property="amountLabel" destination="qgA-QZ-nHF" id="EgV-Kv-TIe"/>
+                <outlet property="currencyLabel" destination="WRq-Y1-y6a" id="UVB-ZL-rQ1"/>
+                <outlet property="dateField" destination="YUV-Lb-nds" id="CGh-0y-P4x"/>
+                <outlet property="paidByField" destination="0u4-iu-nJ3" id="Ujp-Pr-aAO"/>
+                <outlet property="tableView" destination="YtQ-dL-JXU" id="8XL-80-KTi"/>
+                <outlet property="titleLabel" destination="t1Y-SH-Sb4" id="6Kx-O2-OWI"/>
+                <outlet property="view" destination="QDk-eQ-VJ0" id="Qys-9D-U67"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="QDk-eQ-VJ0">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GbZ-xY-nqx">
+                    <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TrM-UE-clC">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="734"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t1Y-SH-Sb4">
+                                    <rect key="frame" x="8" y="16" width="359" height="30"/>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qgA-QZ-nHF">
+                                    <rect key="frame" x="8" y="62" width="334" height="30"/>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZM-uC-2L6">
+                                    <rect key="frame" x="8" y="100" width="39" height="21"/>
+                                    <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
+                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YUV-Lb-nds">
+                                    <rect key="frame" x="8" y="129" width="359" height="30"/>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="selectDateWithSender:" destination="-1" eventType="editingDidBegin" id="vEt-pp-ZDn"/>
+                                    </connections>
+                                </textField>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YtQ-dL-JXU">
+                                    <rect key="frame" x="0.0" y="271" width="375" height="463"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </tableView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paid by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXl-2Z-vB0">
+                                    <rect key="frame" x="8" y="167" width="58" height="21"/>
+                                    <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
+                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0u4-iu-nJ3">
+                                    <rect key="frame" x="8" y="196" width="359" height="30"/>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="selectPaidBySender:" destination="-1" eventType="editingDidBegin" id="MYL-4S-Ecn"/>
+                                    </connections>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Participants" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Sg-pF-rv6">
+                                    <rect key="frame" x="8" y="242" width="97" height="21"/>
+                                    <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
+                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRq-Y1-y6a">
+                                    <rect key="frame" x="358" y="66.666666666666671" width="9" height="21"/>
+                                    <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
+                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="YtQ-dL-JXU" firstAttribute="top" secondItem="9Sg-pF-rv6" secondAttribute="bottom" constant="8" id="45W-Ya-x24"/>
+                                <constraint firstItem="WRq-Y1-y6a" firstAttribute="centerY" secondItem="qgA-QZ-nHF" secondAttribute="centerY" id="7aY-4d-oRG"/>
+                                <constraint firstAttribute="trailing" secondItem="0u4-iu-nJ3" secondAttribute="trailing" constant="8" id="EUl-5d-jdU"/>
+                                <constraint firstItem="dZM-uC-2L6" firstAttribute="leading" secondItem="TrM-UE-clC" secondAttribute="leading" constant="8" id="GmH-ty-3Zy"/>
+                                <constraint firstAttribute="trailing" secondItem="YUV-Lb-nds" secondAttribute="trailing" constant="8" id="GuD-Uc-gp3"/>
+                                <constraint firstItem="YUV-Lb-nds" firstAttribute="leading" secondItem="TrM-UE-clC" secondAttribute="leading" constant="8" id="Gwd-zp-S7T"/>
+                                <constraint firstItem="YUV-Lb-nds" firstAttribute="top" secondItem="dZM-uC-2L6" secondAttribute="bottom" constant="8" id="Mm2-lT-xzY"/>
+                                <constraint firstItem="qgA-QZ-nHF" firstAttribute="leading" secondItem="TrM-UE-clC" secondAttribute="leading" constant="8" id="R8f-jo-Mpu"/>
+                                <constraint firstItem="WRq-Y1-y6a" firstAttribute="leading" secondItem="qgA-QZ-nHF" secondAttribute="trailing" constant="16" id="Shj-K9-uIv"/>
+                                <constraint firstItem="dZM-uC-2L6" firstAttribute="top" secondItem="qgA-QZ-nHF" secondAttribute="bottom" constant="8" id="Tra-II-bnX"/>
+                                <constraint firstItem="t1Y-SH-Sb4" firstAttribute="top" secondItem="TrM-UE-clC" secondAttribute="top" constant="16" id="ZTV-Yi-opd"/>
+                                <constraint firstAttribute="trailing" secondItem="YtQ-dL-JXU" secondAttribute="trailing" id="bIz-eg-idU"/>
+                                <constraint firstItem="t1Y-SH-Sb4" firstAttribute="leading" secondItem="TrM-UE-clC" secondAttribute="leading" constant="8" id="gN2-6H-QlA"/>
+                                <constraint firstAttribute="trailing" secondItem="WRq-Y1-y6a" secondAttribute="trailing" constant="8" id="hUS-IO-c8S"/>
+                                <constraint firstItem="YtQ-dL-JXU" firstAttribute="leading" secondItem="TrM-UE-clC" secondAttribute="leading" id="jS4-5O-Oqr"/>
+                                <constraint firstItem="EXl-2Z-vB0" firstAttribute="top" secondItem="YUV-Lb-nds" secondAttribute="bottom" constant="8" id="mft-mu-1F7"/>
+                                <constraint firstItem="0u4-iu-nJ3" firstAttribute="leading" secondItem="TrM-UE-clC" secondAttribute="leading" constant="8" id="nef-57-8eo"/>
+                                <constraint firstAttribute="trailing" secondItem="t1Y-SH-Sb4" secondAttribute="trailing" constant="8" id="otg-Dc-8Kh"/>
+                                <constraint firstAttribute="bottom" secondItem="YtQ-dL-JXU" secondAttribute="bottom" id="sss-RY-a14"/>
+                                <constraint firstItem="qgA-QZ-nHF" firstAttribute="top" secondItem="t1Y-SH-Sb4" secondAttribute="bottom" constant="16" id="twe-6p-4su"/>
+                                <constraint firstItem="0u4-iu-nJ3" firstAttribute="top" secondItem="EXl-2Z-vB0" secondAttribute="bottom" constant="8" id="vh5-f7-SOY"/>
+                                <constraint firstItem="9Sg-pF-rv6" firstAttribute="top" secondItem="0u4-iu-nJ3" secondAttribute="bottom" constant="16" id="vn0-kY-dpL"/>
+                                <constraint firstItem="9Sg-pF-rv6" firstAttribute="leading" secondItem="TrM-UE-clC" secondAttribute="leading" constant="8" id="zcU-Hj-WNB"/>
+                                <constraint firstItem="EXl-2Z-vB0" firstAttribute="leading" secondItem="TrM-UE-clC" secondAttribute="leading" constant="8" id="zzC-6Y-ty8"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="TrM-UE-clC" secondAttribute="trailing" id="CHr-le-CAQ"/>
+                        <constraint firstItem="TrM-UE-clC" firstAttribute="leading" secondItem="GbZ-xY-nqx" secondAttribute="leading" id="QzV-3o-ioN"/>
+                        <constraint firstAttribute="bottom" secondItem="TrM-UE-clC" secondAttribute="bottom" id="f1p-yo-40s"/>
+                        <constraint firstItem="TrM-UE-clC" firstAttribute="top" secondItem="GbZ-xY-nqx" secondAttribute="top" id="uue-qk-g0Y"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="TrM-UE-clC" firstAttribute="top" secondItem="fIN-Qr-IJH" secondAttribute="top" id="AwW-3B-WA2"/>
+                <constraint firstItem="GbZ-xY-nqx" firstAttribute="leading" secondItem="fIN-Qr-IJH" secondAttribute="leading" id="LRU-XX-NBw"/>
+                <constraint firstItem="TrM-UE-clC" firstAttribute="leading" secondItem="fIN-Qr-IJH" secondAttribute="leading" id="U3R-Wc-te6"/>
+                <constraint firstItem="fIN-Qr-IJH" firstAttribute="bottom" secondItem="TrM-UE-clC" secondAttribute="bottom" id="VwE-rV-rq2"/>
+                <constraint firstItem="fIN-Qr-IJH" firstAttribute="trailing" secondItem="GbZ-xY-nqx" secondAttribute="trailing" id="Wvd-tk-lqt"/>
+                <constraint firstItem="fIN-Qr-IJH" firstAttribute="trailing" secondItem="TrM-UE-clC" secondAttribute="trailing" id="YJH-0g-Fdg"/>
+                <constraint firstItem="fIN-Qr-IJH" firstAttribute="bottom" secondItem="GbZ-xY-nqx" secondAttribute="bottom" id="fYx-so-gyh"/>
+                <constraint firstItem="GbZ-xY-nqx" firstAttribute="top" secondItem="fIN-Qr-IJH" secondAttribute="top" id="vNC-N2-pAk"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fIN-Qr-IJH"/>
+            <point key="canvasLocation" x="138.40000000000001" y="153.69458128078819"/>
+        </view>
+    </objects>
+</document>
